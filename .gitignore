@@ -1,3 +1,12 @@
+# Class materials
+Notes\ *
+
+# Sublime Text
+*.sublime-workspace
+
+# Vagrant support
+.vagrant
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
