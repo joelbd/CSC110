@@ -41,20 +41,16 @@ def main():
   header.draw(win)
 
   # Handle first coordinates
-  p = clicks(win, -2, Point(12, 20), "Point 1: (%d, %d)", "1.")
-  p1 = p
-  x1, y1 = p.getX(), p.getY()
+  p1 = clicks(win, -2, Point(12, 20), "Point 1: (%d, %d)", "1.")
 
   # Handle second coordinates
-  p = clicks(win, +2, Point(88, 20), "Point 2: (%d, %d)", "2.")
-  p2 = p
-  x2, y2 = p.getX(), p.getY()
+  p2 = clicks(win, +2, Point(88, 20), "Point 2: (%d, %d)", "2.")
 
   # Draw the line
   Line(p1, p2).draw(win)
 
   # Calculate slope
-  slope = (y2 - y1) / (x2 - x1)
+  slope = (p2.getY() - p1.getY()) / (p2.getX() - p1.getX())
   slope = round(slope, 1)
 
   # Output slope
