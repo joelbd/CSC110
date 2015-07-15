@@ -9,12 +9,11 @@ def clicks(win, offset, clickLabelLocation, clickLabelText, labelText):
   p = win.getMouse()
   x, y = p.getX(), p.getY()
   p.draw(win)
-  label = Text(Point(x + offset, y + offset), labelText).draw(win)
+  Text(Point(x + offset, y + offset), labelText).draw(win)
   click = Text(clickLabelLocation, clickLabelText % (x, y))
   click.setSize(15)
   click.draw(win)
   return p
-
 
 def main():
 
@@ -42,38 +41,12 @@ def main():
   header.draw(win)
 
   # Handle first coordinates
-  offset = -2
-  labelText = "1."
-  clickLabelLocation = Point(12,20)
-  clickLabelText = "Point 1: (%d, %d)"
-
-  p = clicks(win, offset, clickLabelLocation, clickLabelText, labelText)
-  # p = win.getMouse()
-  # x, y = p.getX(), p.getY()
-  # p.draw(win)
-  # label = Text(Point(x + offset, y + offset), labelText).draw(win)
-  # click = Text(clickLabelLocation, clickLabelText % (x, y))
-  # click.setSize(15)
-  # click.draw(win)
-
+  p = clicks(win, -2, Point(12, 20), "Point 1: (%d, %d)", "1.")
   p1 = p
   x1, y1 = p.getX(), p.getY()
 
   # Handle second coordinates
-  offset = +2
-  labelText = "2."
-  clickLabelLocation = Point(88,20)
-  clickLabelText = "Point 2: (%d, %d)"
-
-  p = clicks(win, offset, clickLabelLocation, clickLabelText, labelText)
-  # p = win.getMouse()
-  # x, y = p.getX(), p.getY()
-  # p.draw(win)
-  # Text(Point(x + offset, y + offset), labelText).draw(win)
-  # click = Text(clickLabelLocation, clickLabelText % (x, y))
-  # click.setSize(15)
-  # click.draw(win)
-
+  p = clicks(win, +2, Point(88, 20), "Point 2: (%d, %d)", "2.")
   p2 = p
   x2, y2 = p.getX(), p.getY()
 
