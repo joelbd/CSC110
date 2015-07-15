@@ -5,16 +5,15 @@
 # between them and displays a calculated slope
 from graphics import *
 
-def clicks():
+def clicks(win, offset, clickLabelLocation, clickLabelText, labelText):
   p = win.getMouse()
   x, y = p.getX(), p.getY()
   p.draw(win)
   label = Text(Point(x + offset, y + offset), labelText).draw(win)
   click = Text(clickLabelLocation, clickLabelText % (x, y))
-  click1.setSize(15)
-  click1.draw(win)
-
-clicks()
+  click.setSize(15)
+  click.draw(win)
+  return p
 
 
 def main():
@@ -48,13 +47,14 @@ def main():
   clickLabelLocation = Point(12,20)
   clickLabelText = "Point 1: (%d, %d)"
 
-  p = win.getMouse()
-  x, y = p.getX(), p.getY()
-  p.draw(win)
-  label = Text(Point(x + offset, y + offset), labelText).draw(win)
-  click = Text(clickLabelLocation, clickLabelText % (x, y))
-  click1.setSize(15)
-  click1.draw(win)
+  p = clicks(win, offset, clickLabelLocation, clickLabelText, labelText)
+  # p = win.getMouse()
+  # x, y = p.getX(), p.getY()
+  # p.draw(win)
+  # label = Text(Point(x + offset, y + offset), labelText).draw(win)
+  # click = Text(clickLabelLocation, clickLabelText % (x, y))
+  # click.setSize(15)
+  # click.draw(win)
 
   p1 = p
   x1, y1 = x, y
@@ -65,16 +65,17 @@ def main():
   clickLabelLocation = Point(88,20)
   clickLabelText = "Point 2: (%d, %d)"
 
-  p = win.getMouse()
-  x, y = p.getX(), p.getY()
-  p.draw(win)
-  Text(Point(x + offset, y + offset), labelText).draw(win)
-  click = Text(clickLabelLocation, clickLabelText % (x, y))
-  click2.setSize(15)
-  click2.draw(win)
+  p = clicks(win, offset, clickLabelLocation, clickLabelText, labelText)
+  # p = win.getMouse()
+  # x, y = p.getX(), p.getY()
+  # p.draw(win)
+  # Text(Point(x + offset, y + offset), labelText).draw(win)
+  # click = Text(clickLabelLocation, clickLabelText % (x, y))
+  # click.setSize(15)
+  # click.draw(win)
 
   p2 = p
-  x1, y1 = x, y
+  x2, y2 = x, y
 
   # Draw the line
   Line(p1, p2).draw(win)
