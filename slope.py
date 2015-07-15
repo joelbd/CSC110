@@ -57,7 +57,7 @@ def main():
   # click.draw(win)
 
   p1 = p
-  x1, y1 = x, y
+  x1, y1 = p.getX(), p.getY()
 
   # Handle second coordinates
   offset = +2
@@ -75,7 +75,7 @@ def main():
   # click.draw(win)
 
   p2 = p
-  x2, y2 = x, y
+  x2, y2 = p.getX(), p.getY()
 
   # Draw the line
   Line(p1, p2).draw(win)
