@@ -35,7 +35,7 @@ def main():
     gridv.setFill("LightSkyBlue1")
     gridv.draw(win)
 
-  # Define text and output assetts
+  # Define text and output assets
   header = Text(Point(50,90), "Click any two points")
   header.setSize(25)
   header.draw(win)
@@ -47,7 +47,9 @@ def main():
   p2 = clicks(win, +2, Point(88, 20), "Point 2: (%d, %d)", "2.")
 
   # Draw the line
-  Line(p1, p2).draw(win)
+  line = Line(p1, p2)
+  line.setArrow("both")
+  line.draw(win)
 
   # Calculate slope
   slope = (p2.getY() - p1.getY()) / (p2.getX() - p1.getX())

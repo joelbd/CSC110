@@ -1,0 +1,9 @@
+Ackley, Dustin, 0.210
+Cano, Robinson, 0.262
+Cruz, Nelson, 0.311
+Jackson, Austin, 0.254
+Miller, Brad, 0.238
+Morrison, Logan, 0.222
+Seager, Kyle, 0.276
+Smith, Seth, 0.266
+Zunino, Mike, 0.179
